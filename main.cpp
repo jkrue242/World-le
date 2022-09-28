@@ -22,11 +22,6 @@ int main() {
     reader.Read();
     std::vector<DataReader::Country> countryData = reader.GetData();
     Worldle game(countryData);
-    DataReader::Country USA;
-    USA.name = "United States";
-    USA.population = 331341050;
-    USA.area = 9147420;
-    game.SetTargetCountry(USA);
     bool result = game.Play();
     if (result)
     {
